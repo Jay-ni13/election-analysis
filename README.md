@@ -85,7 +85,8 @@ The analysis of the congressional election shows that:
 ```
 
 ## Summary
-If the Colorado Board of Elections commission would like to utilize this script for other elections the code can be modified to import the results from a different election, and keep functionality of lists and directories based on how the data in other csv files is indexed:
+If the Colorado Board of Elections commission would like to utilize this script for subsequent elections, the code can be modified in two ways: 
+- 1. To analyze another election's results, one would import the results from that election and keep the same functionality of lists and directories based on how the data in other csv files is indexed:
 ```
     file_to_load = os.path.join("<folder_name>","<file_name.csv>")
         
@@ -93,5 +94,19 @@ If the Colorado Board of Elections commission would like to utilize this script 
         candidate_name = row[?]
         county_name = row[?]
 ```
-*Import multiple data files to analyze results from multiple elections*
-Script functionality contingent upon the presence of three data pieces: 1) Unique Ballot ID, 2) the County the vote is cast, and 3) the Candidate who the vote is for.
+- 2. Multiple election data files could be analyzed at the same time by creating additional load file variables to run other datasets through the same script loop:
+```
+    file_to_load = os.path.join("<folder_name>","<file_name.csv>")
+    file_to_load_2 = os.path.join("<folder_name>","<file_name_2.csv>")
+    file_to_load_3 = os.path.join("<folder_name>","<file_name_3.csv>")
+    
+        with open(file_to_load) as election_data:
+            reader = csv.reader(election_data)
+        
+        with open(file_to_load_2) as election_data_2:
+            reader = csv.reader(election_data_2)
+            
+        with open(file_to_load_3) as election_data_3:
+            reader = csv.reader(election_data_3)
+```    
+- However, the script's functionality remains contingent upon the presence of three data pieces being present in all files analyzed: 1) Unique Ballot ID, 2) the County the vote is cast, and 3) the Candidate who the vote is for.
