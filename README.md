@@ -85,3 +85,11 @@ The analysis of the congressional election shows that:
 ```
 
 ## Summary
+If the Colorado Board of Elections commission would like to utilize this script for other elections the code can be modified to import the results from a different election, and keep functionality of lists and directories based on how the data in other csv files is indexed:
+```
+    file_to_load = os.path.join("<folder_name>","<file_name.csv>")
+        
+        # Locate data based on index position in header row.
+        candidate_name = row[?]
+        county_name = row[?]
+```
