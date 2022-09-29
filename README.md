@@ -93,3 +93,5 @@ If the Colorado Board of Elections commission would like to utilize this script 
         candidate_name = row[?]
         county_name = row[?]
 ```
+*Import multiple data files to analyze results from multiple elections*
+Script functionality contingent upon the presence of three data pieces: 1) Unique Ballot ID, 2) the County the vote is cast, and 3) the Candidate who the vote is for.
