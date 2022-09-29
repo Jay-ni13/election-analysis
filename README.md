@@ -19,8 +19,8 @@ The Colorado Board of Elections commission and their liaison have given us the f
 ## Results
 The analysis of the election shows that:
 - There were 369,711 votes cast in the election.
-'''
 
+'''
     total_votes = 0
         for row in reader:
             total_votes = total_votes + 1
