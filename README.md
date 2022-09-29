@@ -21,11 +21,11 @@ The analysis of the election shows that:
 - There were 369,711 votes cast in the election.
 
 
-    #Initialize a total vote counter.
+    Initialize a total vote counter.
     total_votes = 0
-        #For each row in the CSV file.
+        For each row in the CSV file.
         for row in reader:
-            #Add to the total vote count
+            Add to the total vote count
             total_votes = total_votes + 1
 
 
